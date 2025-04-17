@@ -25,7 +25,7 @@ unzip -q rawdata.zip
 mkdir -p data
 # 2. Move the ./rawdata directory to ./data/raw
 mkdir -p data/raw
-unzip /Users/jimenateran/Documents/shell/02_activities/assignments/rawdata.zip -d data/raw
+unzip rawdata.zip -d data/raw
 
 # 3. List the contents of the ./data/raw directory
 ls data/raw/rawdata
@@ -35,7 +35,6 @@ mkdir -p data/processed/server_logs data/processed/user_logs data/processed/even
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 
-cd /Users/jimenateran/Documents/shell/02_activities/assignments
 cp data/raw/rawdata/*server*.log data/processed/server_logs/
 
 # 6. Repeat the above step for user logs and event logs
