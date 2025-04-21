@@ -44,6 +44,7 @@ cp data/raw/*event*.log data/processed/event_logs/
 
 # 7. Delete all files in ./data/raw/rawdata that contain "ipaddr" in their names
 rm -f data/raw/*ipaddr*
+rm -f data/processed/user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt listing all files in ./data/processed
 find data/processed -type f > data/inventory.txt
