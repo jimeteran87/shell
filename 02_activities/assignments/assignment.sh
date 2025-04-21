@@ -26,8 +26,7 @@ unzip -q rawdata.zip
 mkdir -p data
 
 # 2. Move the ./rawdata directory to ./data/raw
-mkdir -p data/raw
-unzip rawdata.zip -d data/raw
+mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
 ls data/raw/rawdata
@@ -49,4 +48,4 @@ rm -f data/raw/rawdata/*ipaddr*
 # 8. Create a file named ./data/inventory.txt listing all files in ./data/processed
 find data/processed -type f > data/inventory.txt
 
-echo "Project setup is complete!!"
+echo "Project setup is complete!!!"
