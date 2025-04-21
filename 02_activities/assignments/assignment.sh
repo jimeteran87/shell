@@ -36,14 +36,14 @@ ls data/raw/rawdata
 mkdir -p data/processed/server_logs data/processed/user_logs data/processed/event_logs
 
 # 5. Copy all server log files (*.server*.log) from ./data/raw/rawdata to ./data/processed/server_logs
-cp data/raw/rawdata/*server*.log data/processed/server_logs/
 
+cp data/raw/*server*.log data/processed/server_logs/
 # 6. Repeat the above step for user logs and event logs
-cp data/raw/rawdata/*user*.log data/processed/user_logs/
-cp data/raw/rawdata/*event*.log data/processed/event_logs/
+cp data/raw/*user*.log data/processed/user_logs/
+cp data/raw/*event*.log data/processed/event_logs/
 
 # 7. Delete all files in ./data/raw/rawdata that contain "ipaddr" in their names
-rm -f data/raw/rawdata/*ipaddr*
+rm -f data/raw/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt listing all files in ./data/processed
 find data/processed -type f > data/inventory.txt
